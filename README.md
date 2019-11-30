@@ -5,7 +5,7 @@
 
 ### Setting up
 
-##### Installing
+##### Installing - Node
 
 ```
 npm install pbrute
@@ -100,9 +100,23 @@ pbrute.calculate('cr4CKThi$PasswordIfYouDare');
 }
 ```
 
+##### Installing - Browser
+
+_Note: If you have a build step in your application, you can use the instructions above._
+
+Copy one of the distribution files. The `bare` builds only contain what's necessary to compute everything. No translation is available and messages etc. will be broken. The `translations-only` build contains both the core and all of the translations, for user-friendly messages in various langauges. Lastly, the `full` build contains everyting - core, translations and a password dictionary.
+
+```HTML
+<script src="./full.min.js"></script>
+```
+
 ### Documentation
 
 The documentation is currently a bit sparse. For more information, refer to the source, tests and issues.
+
+#### Support
+
+The library uses `BigInt` which is a new addition to JavaScript. It is not supported by all browsers. You can follow the up-to-date support here: https://caniuse.com/#feat=bigint.
 
 #### Configuration
 
@@ -143,6 +157,8 @@ npm run stylelint
 npm run test
 npm run coverage
 npm run check-duplicate-code
+npm run build
+npm run integration
 
 # Build for production
 npm run build
