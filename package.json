@@ -1,6 +1,6 @@
 {
   "name": "pbrute",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A password strength calculator",
   "main": "lib/index.js",
   "scripts": {
