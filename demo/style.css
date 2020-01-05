@@ -36,6 +36,17 @@ body {
   padding: 40px 10px;
 }
 
+aside {
+  background-color: #414972;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 2px;
+}
+
+.hide {
+  display: none;
+}
+
 main {
   display: flex;
   flex-direction: column;

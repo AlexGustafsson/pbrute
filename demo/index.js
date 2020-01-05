@@ -1,4 +1,4 @@
-/* globals document window PBrute */
+/* globals document window PBrute navigator */
 
 function addComment(container, text) {
   const li = document.createElement('li');
@@ -9,6 +9,20 @@ function addComment(container, text) {
 function main() {
   const input = document.querySelector('#password');
   const comments = document.querySelector('#comments');
+
+  const matches = navigator.userAgent.match(/(Chrome|Firefox)\/([^ .]+)/);
+  let hasSupportedBrowser = false;
+  if (matches) {
+    const [browser, version] = matches.slice(1, 3);
+    const hasSupportedChrome = browser === 'Chrome' && Number(version) >= 67;
+    const hasSupportedFirefox = browser === 'Firefox' && Number(version) >= 68;
+    hasSupportedBrowser = hasSupportedChrome || hasSupportedFirefox;
+  }
+
+  if (!hasSupportedBrowser) {
+    const unsupportedNotice = document.querySelector('#unsupported-notice');
+    unsupportedNotice.classList.remove('hide');
+  }
 
   const pbrute = new PBrute();
 
