@@ -110,6 +110,10 @@ Copy one of the distribution files. The `bare` builds only contain what's necess
 <script src="./full.min.js"></script>
 ```
 
+##### Running demo
+
+Simply run `npm start` and navigate to `http://localhost:3000`. This is the same site that is hosted over at `https://pbrute.axgn.se`.
+
 ### Documentation
 
 The documentation is currently a bit sparse. For more information, refer to the source, tests and issues.
