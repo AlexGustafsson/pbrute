@@ -12,7 +12,8 @@
     "build": "npm run build-bare && npm run build-translations-only && npm run build-full",
     "build-bare": "browserify --bare --standalone PBrute --exclude data/owasp-top-10000.js --exclude lib/i18n.json -o dist/bare.js lib/index.js && terser --compress --mangle --output dist/bare.min.js dist/bare.js",
     "build-translations-only": "browserify --bare --standalone PBrute --exclude data/owasp-top-10000.js -o dist/translations-only.js lib/index.js && terser --compress --mangle --output dist/translations-only.min.js dist/translations-only.js",
-    "build-full": "browserify --bare --standalone PBrute -o dist/full.js lib/index.js && terser --compress --mangle --output dist/full.min.js dist/full.js"
+    "build-full": "browserify --bare --standalone PBrute -o dist/full.js lib/index.js && terser --compress --mangle --output dist/full.min.js dist/full.js",
+    "start": "node ./demo/server.js"
   },
   "author": "Alex Gustafsson",
   "license": "MIT",
