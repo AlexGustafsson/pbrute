@@ -38,7 +38,12 @@
     "hours": "hours",
     "minutes": "minutes",
     "seconds": "seconds",
-    "milliseconds": "milliseconds"
+    "milliseconds": "milliseconds",
+    "pattern": {
+      "short": "Pattern: The password contains a repeating pattern",
+      "long": "Pattern: The password contains a long repeating pattern",
+      "repeating": "Pattern: A pattern in the password is repeated many times"
+    }
   },
   "sv-SE": {
     "instant": "omedelbart",
@@ -79,6 +84,11 @@
     "hours": "timmar",
     "minutes": "minuter",
     "seconds": "sekunder",
-    "milliseconds": "millisekunder"
+    "milliseconds": "millisekunder",
+    "pattern": {
+      "short": "Mönster: Lösenordet innehåller ett upprepande mönster",
+      "long": "Mönster: Lösenordet innehåller ett långt upprepande mönster",
+      "repeating": "Mönster: Ett mönster i lösenordet upprepas många gånger"
+    }
   }
 }
