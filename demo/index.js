@@ -41,8 +41,6 @@ function main() {
 
     const result = pbrute.calculate(password);
 
-    console.log(result);
-
     // Add times
     addComment(comments, `<p>Optimistic cracking time</p><p>${result.optimistic}</p>`);
     addComment(comments, `<p>Pessimistic cracking time </p><p>${result.pessimistic}</p>`);
@@ -58,7 +56,19 @@ function main() {
     // Add algorithm times
     for (const algorithm of Object.keys(result.time))
       addComment(comments, `<p>${algorithm}</p><p>${result.time[algorithm]} ms</p>`);
+
+    addComment(comments, '<p>Occurances in the Have I Been pwnd dataset</p><input onclick="check(this)" type="button" value="check" />');
   });
+
+  window.check = async input => {
+    const occurances = await pbrute.haveIBeenPwnd(password);
+    const parent = input.parentElement;
+    parent.removeChild(input);
+
+    const p = document.createElement('p');
+    p.innerHTML = occurances;
+    parent.append(p);
+  };
 }
 
 window.addEventListener('load', main);
