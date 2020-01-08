@@ -155,3 +155,13 @@ test('can calculate weak password strength', t => {
   t.is('instant', result.likely);
   t.is('instant', result.pessimistic);
 });
+
+test('can check password towards haveibeenpwned', async t => {
+  const pbrute = new PBrute();
+
+  const password = 'password';
+  const occurances = await pbrute.haveIBeenPwnd(password);
+
+  // Assume 'password' is in the dataset, which is a reasonable assumption
+  t.true(occurances > 0);
+});
