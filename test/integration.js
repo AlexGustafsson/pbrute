@@ -1,6 +1,6 @@
 import test from 'ava';
 
-test('The bare build truly is bare', async t => {
+test('The bare build truly is bare', t => {
   const PBrute = require('../dist/bare');
   const pbrute = new PBrute({
     i18n: {},
@@ -12,7 +12,7 @@ test('The bare build truly is bare', async t => {
   t.true(result.optimistic.length === 3);
 });
 
-test('The translated build has translations', async t => {
+test('The translated build has translations', t => {
   const PBrute = require('../dist/translations-only');
   const pbrute = new PBrute({
     dictionary: []
@@ -23,7 +23,7 @@ test('The translated build has translations', async t => {
   t.true(result.optimistic.length > 3);
 });
 
-test('The full build has everything', async t => {
+test('The full build has everything', t => {
   const PBrute = require('../dist/translations-only');
   const pbrute = new PBrute();
 

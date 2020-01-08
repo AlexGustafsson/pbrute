@@ -78,17 +78,17 @@ test('can reduce time', t => {
   const milliseconds = 999n;
 
   const result = pbrute.reduceTime(
-    years * BigInt(1000 * 60 * 60 * 24 * 365) +
-    months * BigInt(1000 * 60 * 60 * 24 * 31) +
-    weeks * BigInt(1000 * 60 * 60 * 24 * 7) +
-    days * BigInt(1000 * 60 * 60 * 24) +
-    hours * BigInt(1000 * 60 * 60) +
-    minutes * BigInt(1000 * 60) +
-    seconds * BigInt(1000) +
+    (years * BigInt(1000 * 60 * 60 * 24 * 365)) +
+    (months * BigInt(1000 * 60 * 60 * 24 * 31)) +
+    (weeks * BigInt(1000 * 60 * 60 * 24 * 7)) +
+    (days * BigInt(1000 * 60 * 60 * 24)) +
+    (hours * BigInt(1000 * 60 * 60)) +
+    (minutes * BigInt(1000 * 60)) +
+    (seconds * BigInt(1000)) +
     milliseconds
   );
 
-  t.is('object', typeof(result));
+  t.is('object', typeof result);
   t.is(years, result.years);
   t.is(months, result.months);
   t.is(weeks, result.weeks);
@@ -104,9 +104,9 @@ test('can compute hash time', t => {
 
   const result = pbrute.calculateTimeToHash(BigInt('45678909875435678765434123'));
 
-  t.is('object', typeof(result));
-  for (let key of Object.keys(result))
-    t.is('bigint', typeof(result[key]));
+  t.is('object', typeof result);
+  for (const key of Object.keys(result))
+    t.is('bigint', typeof result[key]);
 });
 
 test('can round time', t => {
@@ -148,7 +148,7 @@ test('can simplify time', t => {
 test('can calculate weak password strength', t => {
   const pbrute = new PBrute();
 
-  const password = 'password'
+  const password = 'password';
   const result = pbrute.calculate(password);
 
   t.is('3 seconds', result.optimistic);
