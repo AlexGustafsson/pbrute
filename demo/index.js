@@ -55,7 +55,7 @@ function main() {
 
     // Add algorithm times
     for (const algorithm of Object.keys(result.time))
-      addComment(comments, `<p>${algorithm}</p><p>${result.time[algorithm]} ms</p>`);
+      addComment(comments, `<p>${algorithm}</p><p>${pbrute.humanizeTime(result.time[algorithm])}</p>`);
 
     addComment(comments, '<p>Occurances in the Have I Been pwnd dataset</p><input onclick="check(this)" type="button" value="check" />');
   });
