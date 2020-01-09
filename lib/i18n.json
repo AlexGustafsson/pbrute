@@ -42,7 +42,8 @@
     "pattern": {
       "short": "Pattern: The password contains a repeating pattern",
       "long": "Pattern: The password contains a long repeating pattern",
-      "repeating": "Pattern: A pattern in the password is repeated many times"
+      "repeating": "Pattern: A pattern in the password is repeated many times",
+      "repeatingCharacter": "Pattern: One or multiple characters are repeated many times"
     }
   },
   "sv-SE": {
@@ -88,7 +89,8 @@
     "pattern": {
       "short": "Mönster: Lösenordet innehåller ett upprepande mönster",
       "long": "Mönster: Lösenordet innehåller ett långt upprepande mönster",
-      "repeating": "Mönster: Ett mönster i lösenordet upprepas många gånger"
+      "repeating": "Mönster: Ett mönster i lösenordet upprepas många gånger",
+      "repeatingCharacter": "Mönster: En eller flera karaktärer upprepas många gånger"
     }
   }
 }
