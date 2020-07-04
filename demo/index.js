@@ -1,4 +1,4 @@
-/* globals document window PBrute navigator */
+/* globals document window PBrute */
 
 function addComment(container, text) {
   const li = document.createElement('li');
@@ -15,7 +15,7 @@ function main() {
     // will result in a syntax error. Therefore, PBrute will not be
     // properly defined. If using it fails, the browser likely does
     // not support BigInt
-    PBrute
+    PBrute; // eslint-disable-line no-unused-expressions
   } catch {
     const unsupportedNotice = document.querySelector('#unsupported-notice');
     unsupportedNotice.classList.remove('hide');
@@ -30,7 +30,7 @@ function main() {
 
     // Clear children
     while (comments.lastChild)
-      comments.removeChild(comments.lastChild);
+      comments.remove(comments.lastChild);
 
     password = input.value;
     if (password === '')
@@ -60,7 +60,7 @@ function main() {
   window.check = async input => {
     const occurances = await pbrute.haveIBeenPwnd(password);
     const parent = input.parentElement;
-    parent.removeChild(input);
+    parent.remove(input);
 
     const p = document.createElement('p');
     p.innerHTML = occurances;
