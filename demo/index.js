@@ -10,16 +10,13 @@ function main() {
   const input = document.querySelector('#password');
   const comments = document.querySelector('#comments');
 
-  const matches = navigator.userAgent.match(/(Chrome|Firefox)\/([^ .]+)/);
-  let hasSupportedBrowser = false;
-  if (matches) {
-    const [browser, version] = matches.slice(1, 3);
-    const hasSupportedChrome = browser === 'Chrome' && Number(version) >= 67;
-    const hasSupportedFirefox = browser === 'Firefox' && Number(version) >= 68;
-    hasSupportedBrowser = hasSupportedChrome || hasSupportedFirefox;
-  }
-
-  if (!hasSupportedBrowser) {
+  try {
+    // If the browser does not support BigInt, the PBrute source code
+    // will result in a syntax error. Therefore, PBrute will not be
+    // properly defined. If using it fails, the browser likely does
+    // not support BigInt
+    PBrute
+  } catch {
     const unsupportedNotice = document.querySelector('#unsupported-notice');
     unsupportedNotice.classList.remove('hide');
   }
