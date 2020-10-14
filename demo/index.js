@@ -60,7 +60,7 @@ function main() {
   window.check = async input => {
     const occurances = await pbrute.haveIBeenPwnd(password);
     const parent = input.parentElement;
-    parent.remove(input);
+    parent.removeChild(input);
 
     const p = document.createElement('p');
     p.innerHTML = occurances;
