@@ -115,13 +115,14 @@ ul {
 
 li {
   display: grid;
-  grid-template-columns: 0.75fr 1.25fr;
+  grid-template-columns: 0.3fr 0.7fr;
   align-items: center;
   padding: 5px;
 }
 
 li > p:nth-of-type(2) {
   text-align: right;
+  word-break: break-all;
 }
 
 li:nth-of-type(2n) {
