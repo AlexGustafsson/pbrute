@@ -30,7 +30,7 @@ function main() {
 
     // Clear children
     while (comments.lastChild)
-      comments.remove(comments.lastChild);
+      comments.removeChild(comments.lastChild);
 
     password = input.value;
     if (password === '')
