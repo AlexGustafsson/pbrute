@@ -1,6 +1,6 @@
-node_modules
-dist
-.git
-README.md
-update-wordlist.sh
-lib
+# Blacklist everything
+*
+
+# Whitelist application source and test files
+!/dist
+!/package*

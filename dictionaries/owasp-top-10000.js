@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 module.exports = [
   'password',
   '123456',

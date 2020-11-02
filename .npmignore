@@ -1,0 +1,9 @@
+# Ignore TypeScript source
+src
+# Ignore raw data
+data
+
+# Ignore tests and development files
+integration
+.*
+tsconfig.json
