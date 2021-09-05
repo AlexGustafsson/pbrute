@@ -1,6 +1,17 @@
-# Blacklist everything
-*
-
-# Whitelist application source and test files
-!/dist
-!/package*
+node_modules
+.nyc_output
+.git
+dictionaries
+dist
+src
+test
+.eslintrc
+.gitignore
+.npmignore
+docker-build.sh
+LICENSE.md
+package-lock.json
+package.json
+README.md
+tsconfig.json
+update-wordlist.sh

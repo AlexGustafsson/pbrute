@@ -1,11 +1,5 @@
-FROM node:12.6.0-alpine
+FROM dragas/thttpd
 
-WORKDIR /app
+COPY demo /var/www/http
 
-COPY demo .
-
-EXPOSE 3000
-
-USER node
-
-CMD ["node", "server.js"]
+EXPOSE 80
